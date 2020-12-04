@@ -1,12 +1,12 @@
-variable "AWS_ACCESS_KEY_ID" {
+variable "aws_access_key" {
     description = "AWS Access Key"
 }
 
-variable "AWS_SECRET_ACCESS_KEY" {
+variable "aws_secret_key" {
     description = "AWS Secret Key"
 }
 
-variable "AWS_SESSION_TOKEN" {
+variable "aws_session_token" {
     description = "AWS Session Token"
 }
 
