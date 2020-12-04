@@ -5,9 +5,9 @@ resource "aws_instance" "jenkins-server" {
     iam_instance_profile = aws_iam_instance_profile.jenkins-main-profile.id
     vpc_security_group_ids = [aws_security_group.jenkins-server-sg.id]
     user_data = templatefile("${path.module}/scripts/jenkins-install.sh", {
-        AWS_ACCESS_KEY = var.aws_access_key,
-        AWS_SECRET_KEY = var.aws_secret_key,
-        AWS_SESSION_TOKEN = var.aws_session_token,
+        AWS_ACCESS_KEY = var.AWS_ACCESS_KEY_ID,
+        AWS_SECRET_KEY = var.AWS_SECRET_ACCESS_KEY,
+        AWS_SESSION_TOKEN = var.AWS_SESSION_TOKEN,
         AWS_REGION = var.aws_region,
         BEARER_TOKEN = var.tfe_api_token,
         ASSET_BUCKET = var.bucket,
