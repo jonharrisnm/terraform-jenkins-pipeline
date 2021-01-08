@@ -50,7 +50,7 @@ variable "owner" {
 
 variable "hc_region" {
     description = "Sales region"
-    default = "NA-SOUTHEAST-ENT"
+    default = "AMER-CentralE2-R1"
 }
 
 variable "purpose" {
@@ -60,5 +60,5 @@ variable "purpose" {
 
 variable "ttl" {
     description = "Hours to stay online"
-    default = "24"
+    default = "-1"
 }
